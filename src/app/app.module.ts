@@ -6,27 +6,27 @@ import { AppComponent } from './app.component';
 import { SliderComponent_1 } from './components/slider_1/slider_1.component';
 import { SliderComponent_2 } from './components/slider_2/slider_2.component';
 import { SliderComponent_3 } from './components/slider_3/slider_3.component';
-import { SliderItemComponentImg } from './components/slider-item-img/slider-item-img.component';
+import { SliderItemImgComponent } from './components/slider-item-img/slider-item-img.component';
 import { SliderItemComponent } from './components/slider-item/slider-item.component';
 
-import { ArrowStyle } from './arrow-style.directive';
+import { ArrowStyleDirective } from './arrow-style.directive';
 
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    SliderComponent_1,
-	 SliderComponent_2,
-	 SliderComponent_3,
-    SliderItemComponentImg,
-	 SliderItemComponent,
-	 ArrowStyle
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+	 declarations: [
+		AppComponent,
+		SliderComponent_1,
+		SliderComponent_2,
+		SliderComponent_3,
+		SliderItemImgComponent,
+		SliderItemComponent,
+		ArrowStyleDirective
+	],
+	imports: [
+		BrowserModule,
+		AppRoutingModule
+	],
+	providers: [],
+	bootstrap: [AppComponent]
 })
 export class AppModule { }

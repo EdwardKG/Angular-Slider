@@ -17,13 +17,13 @@
       class="slider__button slider__left" 
       (click)="previous()"
       [disabled]="!translate">
-		<img arrow src="assets\images\left-arrow.png"> 
+		<img app-arrow src="assets\images\left-arrow.png"> 
     </button>
 
     <button 
       class="slider__button slider__right" 
       (click)="next()" 
       [disabled]="currentSlideIndex >= 9">
-		<img arrow src="assets\images\right-arrow.png">
+		<img app-arrow src="assets\images\right-arrow.png">
     </button>
 </div>
