@@ -1,0 +1,43 @@
+<div class="slider">
+    <div
+      class="slider__track"
+      [class.animated]="!isActive"
+      (mousedown)="onDragStart($event)"
+      (mouseup)="onDragEnd()"
+      (mousemove)="onDragMove($event)"
+      (mouseleave)="onDragEnd()"
+      [ngStyle]="{'transform': 'translateX('+ translate + 'px' +')'}"
+    >
+        <app-slider-item-img *ngFor="let slide of slides"
+        [slide]="slide"
+        ></app-slider-item-img>
+    </div>
+	 <div
+      class="slider__track"
+      [class.animated]="!isActive"
+      (mousedown)="onDragStart($event)"
+      (mouseup)="onDragEnd()"
+      (mousemove)="onDragMove($event)"
+      (mouseleave)="onDragEnd()"
+      [ngStyle]="{'transform': 'translateX('+ translate + 'px' +')'}"
+    >
+	  <app-slider-item *ngFor="let slideText of slidesText"
+        [slide]="slideText"
+        ></app-slider-item>
+		  </div>
+	 
+
+    <button 
+      class="slider__button slider__left" 
+      (click)="previous()"
+      [disabled]="!translate">
+		<img arrow src="assets\images\left-arrow.png"> 
+    </button>
+
+    <button 
+      class="slider__button slider__right" 
+      (click)="next()" 
+      [disabled]="currentSlideIndex >= 9">
+		<img arrow src="assets\images\right-arrow.png">
+    </button>
+</div>
